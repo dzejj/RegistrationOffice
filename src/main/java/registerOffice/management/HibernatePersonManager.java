@@ -45,7 +45,21 @@ public class HibernatePersonManager implements ManagerInterface<Person>{
 			return false;
 		}
 	}
-
+////////////////////////////////////////////////////////////
+	@Override
+	public boolean addPerson(Person obj) {
+		try{
+			this.session.beginTransaction();
+			this.session.save(obj);
+			
+			session.beginTransaction().commit();
+			return true;
+		}catch(Exception ex)
+		{
+			return false;
+		}
+	}
+//////////////////////////////////////////////////////////////////////////
 	@Override
 	public boolean delete(Person obj) {
 		try{

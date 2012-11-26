@@ -11,7 +11,7 @@ import java.util.List;
 
 import registerOffice.businessObjects.persons.Person;
 
-public class PersonManager implements ManagerInterface<Person>{
+public abstract class PersonManager implements ManagerInterface<Person>{
 
 	Connection conn;
 	private String url = "jdbc:hsqldb:hsql://localhost/workdb";

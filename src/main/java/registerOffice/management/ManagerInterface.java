@@ -10,6 +10,7 @@ public interface ManagerInterface<TEntity> {
 	public List<TEntity> getAll();
 	public boolean save(TEntity obj);
 	public boolean delete(TEntity obj);
+	boolean addPerson(Person obj);
 	
 	/**
 	 * inne metody
